@@ -1,12 +1,9 @@
-isPresent=$((RANDOM%3));
-perHourSalary=20;
-workingHour=0;
-if [ $isPresent -eq 0 ]
+isPresent=1;
+Employeecheck=$((RANDOM%2));
+
+if [ $isPresent -eq $Employeecheck ];
 then
-	echo "Employee is absent";
-	workingHour=0;
-elif [ $isPresent -eq 1 ]
-then
+	echo "Employee is absent"
+else
 	echo "Employee is present";
-	workingHour=8;
 fi
